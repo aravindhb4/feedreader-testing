@@ -24,8 +24,8 @@ To do test automation using Jasmine on the Feed reader website to ensure its fun
 ###### New Feed Selection
 * The feed content changes if a new feed is selected from the menu
 
-### View it online [here]('http://aravindhb4.github.io/feedreader-testing)
+### View it online [here](http://aravindhb4.github.io/feedreader-testing)
 ***
 ###### References
-Udacity's [Javascript Testing Course]('https://www.udacity.com/course/javascript-testing--ud549')
-Jasmine [Documentation]('https://jasmine.github.io/')
+* Udacity's [Javascript Testing Course](https://www.udacity.com/course/javascript-testing--ud549)
+* Jasmine [Documentation](https://jasmine.github.io/)
