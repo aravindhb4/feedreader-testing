@@ -52,11 +52,12 @@ $(function() {
     // This is the second test suite named 'The menu'
     describe('The menu', function() {
 
+    	var hiddenMenu = $('body').hasClass('menu-hidden');
          // This test ensures that the menu element is
          // hidden by default. This checks if the CSS class to
          // hide the menu is present in the body
         it('is hidden by default', function() {
-            expect(document.body.className).toContain('menu-hidden');
+            expect(hiddenMenu).toBe(true);
         });
 
          // This test ensures that the menu changes
@@ -65,13 +66,13 @@ $(function() {
          // clicked and does it hide when clicked again.
         it('is displayed when menu icon is clicked', function() {
             $('a.menu-icon-link').click();
-            expect(document.body.className).not.toContain('menu-hidden');
+            expect($('body').hasClass('menu-hidden')).toBe(false);
         });
 
         //This test is to verify menu is hidden after second click
-        it('is hidded when menu icon is clicked again', function() {
+        it('is hidden when menu icon is clicked again', function() {
             $('a.menu-icon-link').click();
-            expect(document.body.className).toContain('menu-hidden');
+            expect(hiddenMenu).toBe(true);
         });
 
     });    
@@ -81,19 +82,16 @@ $(function() {
         var entryCount;
 
         beforeEach(function(done) {
-            loadFeed(0, function() {
-                done();
+            loadFeed(0, done)
             });
-        });
 
          // This test suite ensures that when the loadFeed
          // function is called and completes its work, there is at least
          // a single .entry element within the .feed container.
 
-        it('contain atleast a single entry', function(done) {
-            entryCount = $('.entry').length;
+        it('contain atleast a single entry', function() {
+            entryCount = $('.feed .entry').length;
             expect(entryCount).toBeGreaterThan(0);
-            done();
         });
     });
 

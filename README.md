@@ -6,6 +6,13 @@ An Udacity FEND - Feed Reader Testing Project using Jasmine
 
 To do test automation using Jasmine on the Feed reader website to ensure its functionalities are working.
 
+### Using the application
+* Download the files and open *index.html*.
+* Jasmine test suite results can be seen below the blog.
+* If they all are green, then our test cases are satisfied.
+* Below are the tests in *feedreader.js* file.
+
+
 ### Tests Done 
 
 ###### Rss Feeds
